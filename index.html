@@ -3,69 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Research</title>
+    <title>Poor Ph.D. Student's Research</title>
     <style>
+        /* 背景設置 */
         body {
-            background: url('image/lab_background.PNG') no-repeat center center fixed;
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
             margin: 0;
             font-family: Arial, sans-serif;
+            background: url('Image/lab_background.PNG') no-repeat center center fixed;
+            background-size: cover;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background-color: rgba(255, 255, 255, 0.8);
+
+        /* 主容器設置 */
+        .main-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* 側邊欄 */
+        .sidebar {
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* 內容區塊 */
+        .content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         h1 {
             text-align: center;
             color: #333;
         }
+
         p {
-            line-height: 1.6;
+            line-height: 1.8;
             color: #555;
-        }
-        .image-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        .image-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .image-grid img:hover {
-            transform: scale(1.05);
-        }
-        nav {
-            text-align: center;
             margin-bottom: 20px;
         }
-        nav a {
-            margin: 0 10px;
-            color: #0066cc;
-            text-decoration: none;
+
+        /* 圖片區塊 */
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="about.html">About Me</a> | 
+    <div class="main-container">
+        <!-- 側邊欄 -->
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
             <a href="research.html">Research</a>
-        </nav>
-        <h1>Welcome to My Research Page</h1>
-        <p>Hello! I'm a PhD student researching [Your Research Topic]. This page provides an overview of my work, including some of the key projects and findings.</p>
-        <div class="image-grid">
-            <img src="image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image">
-            <img src="image/bioreactor.PNG" alt="bioreactor Image">
+        </div>
+
+        <!-- 內容區塊 -->
+        <div class="content">
+            <h1>Poor Ph.D. Student's Research</h1>
+            <p>
+                Welcome to my research page! Here, I share my journey as a Ph.D. student exploring [Your Research Topic].
+                Through challenges and discoveries, I aim to contribute meaningful insights to the field.
+            </p>
+            <p>
+                On this website, you'll find information about my research projects, experiences, and key findings. Feel 
+                free to explore the different sections to learn more about my work.
+            </p>
+
+            <!-- 圖片區塊 -->
+            <div class="image-container">
+                <img src="Image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image">
+                <div class="image-caption">
+                    <p>This is a "Lung-on-a-chip" model, a key focus of my research on microfluidic systems.</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
