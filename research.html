@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Research</title>
+    <title>Research</title>
     <style>
         body {
             background: url('image/lab_background.PNG') no-repeat center center fixed;
@@ -12,6 +12,7 @@
             backdrop-filter: blur(5px);
             margin: 0;
             font-family: Arial, sans-serif;
+            color: white;
         }
         .container {
             max-width: 800px;
@@ -22,11 +23,6 @@
         }
         h1 {
             text-align: center;
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-            color: #555;
         }
         .image-grid {
             display: grid;
@@ -43,30 +39,23 @@
         .image-grid img:hover {
             transform: scale(1.05);
         }
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin: 0 10px;
+        a {
             color: #0066cc;
             text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="about.html">About Me</a> | 
-            <a href="research.html">Research</a>
-        </nav>
-        <h1>Welcome to My Research Page</h1>
-        <p>Hello! I'm a PhD student researching [Your Research Topic]. This page provides an overview of my work, including some of the key projects and findings.</p>
+        <h1>Research Projects</h1>
         <div class="image-grid">
             <img src="image/lung-on-a-chip_1.PNG" alt="Lung-on-a-chip Image 1">
             <img src="image/lung-on-a-chip_2.PNG" alt="Lung-on-a-chip Image 2">
         </div>
+        <a href="index.html">Back to Home</a>
     </div>
 </body>
 </html>
