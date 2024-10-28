@@ -6,11 +6,14 @@
     <title>Poor Ph.D. Student's Research</title>
     <style>
         /* 背景設置 */
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
             background: url('Image/lab_background.PNG') no-repeat center center fixed;
             background-size: cover;
+            height: 100%; /* 保證背景覆蓋整個頁面 */
+            overflow-x: hidden; /* 禁止水平滾動 */
         }
 
         /* 主容器設置 */
@@ -18,7 +21,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* 確保最小高度為視窗高度 */
+            padding: 20px; /* 增加內邊距，避免內容緊貼邊界 */
+            box-sizing: border-box;
         }
 
         /* 內容區塊 */
@@ -26,16 +31,15 @@
             width: 80%;
             max-width: 1200px;
             padding: 40px;
-            overflow-y: auto;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            margin: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             text-align: center;
             color: #333;
+            margin-top: 0; /* 去除額外空白 */
         }
 
         p {
@@ -54,12 +58,12 @@
         }
 
         .image-container img {
-            width: 45%; /* 設定每張圖片的寬度為45% */
-            height: auto; /* 高度自適應 */
-            aspect-ratio: 1 / 1; /* 強制圖片為正方形比例 */
+            width: 45%; /* 每張圖片占父容器的45%寬度 */
+            height: auto;
+            aspect-ratio: 1 / 1;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            object-fit: cover; /* 保持圖片比例，同時填滿框架 */
+            object-fit: cover;
         }
 
         .image-caption {
@@ -98,7 +102,7 @@
             <!-- 圖片區塊 -->
             <div class="image-container">
                 <img src="Image/Poor_PhD_Student.PNG" alt="Poor Ph.D. Student Image">
-                <img src="Image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image"> 
+                <img src="Image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image">
             </div>
 
             <div class="image-caption">
