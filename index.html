@@ -50,13 +50,16 @@
             justify-content: space-around;
             align-items: center;
             margin-top: 20px;
+            gap: 10px; /* 圖片間距 */
         }
 
         .image-container img {
-            max-width: 48%;  /* 每張圖片占父容器的48%寬度 */
-            height: auto;
+            width: 45%; /* 設定每張圖片的寬度為45% */
+            height: auto; /* 高度自適應 */
+            aspect-ratio: 1 / 1; /* 強制圖片為正方形比例 */
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            object-fit: cover; /* 保持圖片比例，同時填滿框架 */
         }
 
         .image-caption {
@@ -95,8 +98,7 @@
             <!-- 圖片區塊 -->
             <div class="image-container">
                 <img src="Image/Poor_PhD_Student.PNG" alt="Poor Ph.D. Student Image">
-                <img src="/Users/hsuanlin/Desktop/Side_projects/poor_phd_student_ape/poor_PhD_student/Image/lung-on-a-chip.PNG" 
-                     alt="Lung-on-a-chip Image">
+                <img src="Image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image"> 
             </div>
 
             <div class="image-caption">
