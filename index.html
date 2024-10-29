@@ -118,18 +118,24 @@
             color: #333;
         }
 
-        /* Image container */
-        .image-container {
+        /* Section container with text and image */
+        .section {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
+            align-items: flex-start;
             margin-top: 30px;
             gap: 20px;
-            flex-wrap: wrap;
         }
 
-        .image-container img {
-            width: 45%;
+        .section .text {
+            flex: 1;
+        }
+
+        .section .image {
+            flex: 1;
+        }
+
+        .section .image img {
+            width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -158,12 +164,16 @@
                 order: 2; /* 保持在内容之后 */
             }
 
-            .content {
-                order: 1; /* 保持在前面 */
-            }
-
             .image-container img {
                 width: 100%;
+            }
+
+            .section {
+                flex-direction: column;
+            }
+
+            .section .image {
+                margin-top: 20px;
             }
         }
 
@@ -202,23 +212,30 @@
                 My research focuses on <strong>lung-on-a-chip</strong> technology, which integrates <strong>organ-on-a-chip</strong> systems with <strong>stem cells</strong> to study lung development and regeneration. This innovative approach aims to develop new therapeutic strategies for <strong>lung adenocarcinoma</strong>, a type of lung cancer.
             </p>
 
-            <!-- Bioreactor Section -->
-            <h2 class="subtitle">Bioreactor in Research</h2>
-            <p>
-                In addition to lung-on-a-chip technology, we utilize a <strong>bioreactor</strong> to culture human lung tissues. This setup allows us to create a controlled environment that mimics the physiological conditions of the human body, facilitating the study of lung development and regeneration. The bioreactor enables precise manipulation of variables such as oxygen levels, nutrient supply, and mechanical forces, which are crucial for understanding the complex processes involved in lung tissue formation and healing.
-            </p>
+            <!-- Lung-on-a-chip Model Section -->
+            <h2 class="subtitle">Lung-on-a-chip Model</h2>
+            <div class="section">
+                <div class="text">
+                    <p>
+                        The development of a lung-on-a-chip model provides a more accurate platform for studying lung diseases by mimicking the physiological environment of the human lung. This technology not only advances our understanding of lung injuries and diseases but also reduces the need for animal testing and lowers the costs associated with clinical trials. Consequently, it accelerates the development of safer and more effective treatments.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="Image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image">
+                </div>
+            </div>
 
-            <!-- Importance of Research -->
-            <h2 class="subtitle">Significance of Research</h2>
-            <p>
-                The development of a lung-on-a-chip model provides a more accurate platform for studying lung diseases by mimicking the physiological environment of the human lung. This technology not only advances our understanding of lung injuries and diseases but also reduces the need for animal testing and lowers the costs associated with clinical trials. Consequently, it accelerates the development of safer and more effective treatments.
-            </p>
-
-            <!-- Additional Images -->
-            <h2 class="subtitle">Research Images</h2>
-            <div class="image-container">
-                <img src="Image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image">
-                <img src="Image/bioreactor.PNG" alt="Bioreactor Image">
+            <!-- Bioreactor Model Section -->
+            <h2 class="subtitle">Bioreactor Model</h2>
+            <div class="section">
+                <div class="text">
+                    <p>
+                        In addition to lung-on-a-chip technology, we utilize a <strong>bioreactor</strong> to culture human lung tissues. This setup allows us to create a controlled environment that mimics the physiological conditions of the human body, facilitating the study of lung development and regeneration. The bioreactor enables precise manipulation of variables such as oxygen levels, nutrient supply, and mechanical forces, which are crucial for understanding the complex processes involved in lung tissue formation and healing.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="Image/bioreactor.PNG" alt="Bioreactor Image">
+                </div>
             </div>
 
             <!-- Image Caption -->
@@ -242,6 +259,8 @@
                 <li><strong>ETH (ERC20):</strong> 0xbd5088030c09150cefda3dc5572d561033023a5a</li>
                 <li><strong>SOL (Solana):</strong> D4SDRTgmsTT5bWc2M4h69zasNkf88PFE6ZBzTBZBt46i</li>
             </ul>
+            <!-- 添加捐赠页面链接 -->
+            <a href="donations.html" class="back-link" style="display: block; margin-top: 20px; text-decoration: none; color: #4CAF50; font-weight: bold;">View Donations Page →</a>
         </div>
     </div>
 </body>
