@@ -12,31 +12,66 @@
             font-family: Arial, sans-serif;
             background: url('Image/lab_background.PNG') no-repeat center center fixed;
             background-size: cover;
-            height: 100%; /* Ensures the background covers the entire page */
-            overflow-x: hidden; /* Disable horizontal scrolling */
+            height: 100%;
+            overflow-x: hidden;
         }
 
-        /* Main container settings */
+        /* Main container with sidebar */
         .main-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Ensures minimum height matches the viewport height */
-            padding: 20px; /* Adds padding to prevent content from sticking to the edges */
+            min-height: 100vh;
+            padding: 20px;
             box-sizing: border-box;
         }
 
-        /* Content block */
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .sidebar p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .donation-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .donation-list li {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+            word-break: break-all;
+        }
+
+        /* Content styling */
         .content {
-            width: 80%;
-            max-width: 1200px;
+            flex: 1;
             padding: 40px;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Header section with title and image */
+        /* Header section with title and photo */
         .header {
             display: flex;
             align-items: center;
@@ -70,36 +105,22 @@
             color: #333;
         }
 
-        /* Donation list */
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #f9f9f9;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            border-left: 4px solid #4CAF50;
-        }
-
         /* Image container */
         .image-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
             margin-top: 30px;
-            gap: 20px; /* Adds space between images */
+            gap: 20px;
             flex-wrap: wrap;
         }
 
         .image-container img {
-            width: 45%; /* Each image takes up 45% of the parent container width */
+            width: 45%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            object-fit: cover; /* Ensures the image fills the frame without distortion */
+            object-fit: cover;
         }
 
         /* Image caption */
@@ -111,6 +132,22 @@
         }
 
         /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .image-container img {
+                width: 100%;
+            }
+        }
+
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -121,15 +158,27 @@
                 margin-right: 0;
                 margin-bottom: 15px;
             }
-
-            .image-container img {
-                width: 100%;
-            }
         }
     </style>
 </head>
 <body>
     <div class="main-container">
+        <!-- Sidebar for Donations -->
+        <div class="sidebar">
+            <h2>Donations</h2>
+            <p>
+                Any financial support would significantly aid me in staying on track and completing my studies. 
+                Your contributions will help alleviate the financial pressures and allow me to focus more on my research.
+            </p>
+            <ul class="donation-list">
+                <li><strong>USDT (TRC20):</strong> TNkpdodCBqPqSuDTjgyoSYWLNQBedByFnu</li>
+                <li><strong>BTC (BEP20):</strong> 0xbd5088030c09150cefda3dc5572d561033023a5a</li>
+                <li><strong>ETH (ERC20):</strong> 0xbd5088030c09150cefda3dc5572d561033023a5a</li>
+                <li><strong>SOL (Solana):</strong> D4SDRTgmsTT5bWc2M4h69zasNkf88PFE6ZBzTBZBt46i</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
         <div class="content">
             <!-- Header with title and photo -->
             <div class="header">
@@ -139,12 +188,12 @@
 
             <!-- Introduction -->
             <p>
-                I’m a bioengineering PhD student navigating the challenges of limited financial resources. My stipend barely covers basic living expenses, making it difficult to afford meals, maintain savings, and pay rent. The financial strain often forces me to work long hours and stay up late to keep up with my research. Despite these hardships, I am dedicated to completing my degree and contributing valuable insights to the field of biomedical science.
+                I am a bioengineering PhD student facing significant financial challenges. My stipend barely covers my basic living expenses, making it difficult to afford meals, maintain savings, and pay rent. The financial strain often forces me to work long hours and stay up late to keep up with my research. Despite these hardships, I am dedicated to completing my degree and contributing valuable insights to the field of biomedical science.
             </p>
 
             <!-- Research Focus -->
             <p>
-                My research centers on <strong>lung-on-a-chip</strong> technology, which integrates <strong>organ-on-a-chip</strong> systems with <strong>stem cells</strong> to explore lung development and regeneration. This innovative approach aims to develop new therapeutic strategies for <strong>lung adenocarcinoma</strong>, a type of lung cancer.
+                My research focuses on <strong>lung-on-a-chip</strong> technology, which integrates <strong>organ-on-a-chip</strong> systems with <strong>stem cells</strong> to study lung development and regeneration. This innovative approach aims to develop new therapeutic strategies for <strong>lung adenocarcinoma</strong>, a type of lung cancer.
             </p>
 
             <!-- Importance of Research -->
@@ -152,22 +201,10 @@
                 The development of a lung-on-a-chip model provides a more accurate platform for studying lung diseases by mimicking the physiological environment of the human lung. This technology not only advances our understanding of lung injuries and diseases but also reduces the need for animal testing and lowers the costs associated with clinical trials. Consequently, it accelerates the development of safer and more effective treatments.
             </p>
 
-            <!-- Financial Support Request -->
-            <p>
-                Any <strong>financial support</strong> would significantly aid me in staying on track and completing my studies. Your contributions will help alleviate the financial pressures and allow me to focus more on my research.
-            </p>
-
-            <!-- Donation Information -->
-            <ul>
-                <li><strong>USDT (TRC20):</strong> TNkpdodCBqPqSuDTjgyoSYWLNQBedByFnu</li>
-                <li><strong>BTC (BEP20):</strong> 0xbd5088030c09150cefda3dc5572d561033023a5a</li>
-                <li><strong>ETH (ERC20):</strong> 0xbd5088030c09150cefda3dc5572d561033023a5a</li>
-                <li><strong>SOL (Solana):</strong> D4SDRTgmsTT5bWc2M4h69zasNkf88PFE6ZBzTBZBt46i</li>
-            </ul>
-
             <!-- Additional Images -->
             <div class="image-container">
                 <img src="Image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image">
+                <img src="Image/lung-adenocarcinoma.PNG" alt="Lung Adenocarcinoma Image">
             </div>
 
             <!-- Image Caption -->
