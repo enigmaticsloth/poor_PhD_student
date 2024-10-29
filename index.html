@@ -31,21 +31,57 @@
             width: 80%;
             max-width: 1200px;
             padding: 40px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-top: 0; /* Removes extra space above the title */
+        /* Header section with title and image */
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2em;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Paragraph styles */
         p {
             line-height: 1.8;
             color: #555;
             margin-bottom: 20px;
+        }
+
+        /* Highlighted text */
+        strong {
+            color: #333;
+        }
+
+        /* Donation list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
         }
 
         /* Image container */
@@ -53,45 +89,75 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin-top: 20px;
-            gap: 10px; /* Adds space between images */
+            margin-top: 30px;
+            gap: 20px; /* Adds space between images */
+            flex-wrap: wrap;
         }
 
         .image-container img {
             width: 45%; /* Each image takes up 45% of the parent container width */
             height: auto;
-            aspect-ratio: 1 / 1; /* Maintains a square aspect ratio */
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             object-fit: cover; /* Ensures the image fills the frame without distortion */
         }
 
+        /* Image caption */
         .image-caption {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 20px;
             font-size: 16px;
             color: #333;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .image-container img {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="main-container">
         <div class="content">
-            <h1>Poor Ph.D. Student</h1>
+            <!-- Header with title and photo -->
+            <div class="header">
+                <img src="Image/Poor_PhD_Student.PNG" alt="Poor Ph.D. Student Image">
+                <h1>Poor Ph.D. Student's Research</h1>
+            </div>
+
+            <!-- Introduction -->
             <p>
-                I’m a bioengineering PhD student surviving on a stipend that barely covers my basic living expenses. 
-                Many times, I struggle to afford meals, my bank account runs dry, and paying rent becomes a major challenge. 
-                The financial pressure has forced me to work excessive hours and stay up late just to keep up with my research. 
-                However, I remain committed to finishing my degree and making meaningful contributions to biomedical science.
+                I’m a bioengineering PhD student navigating the challenges of limited financial resources. My stipend barely covers basic living expenses, making it difficult to afford meals, maintain savings, and pay rent. The financial strain often forces me to work long hours and stay up late to keep up with my research. Despite these hardships, I am dedicated to completing my degree and contributing valuable insights to the field of biomedical science.
             </p>
+
+            <!-- Research Focus -->
             <p>
-                My research focuses on <strong>lung-on-a-chip</strong> technology, integrating <strong>organ-on-a-chip</strong> 
-                systems with <strong>stem cells</strong> to study lung development, regeneration, and to develop new therapeutic strategies 
-                for <strong>lung adenocarcinoma</strong>.
+                My research centers on <strong>lung-on-a-chip</strong> technology, which integrates <strong>organ-on-a-chip</strong> systems with <strong>stem cells</strong> to explore lung development and regeneration. This innovative approach aims to develop new therapeutic strategies for <strong>lung adenocarcinoma</strong>, a type of lung cancer.
             </p>
+
+            <!-- Importance of Research -->
             <p>
-                Any <strong>financial support</strong> would greatly help me stay on track and complete my studies. I also accept cryptocurrency donations:
+                The development of a lung-on-a-chip model provides a more accurate platform for studying lung diseases by mimicking the physiological environment of the human lung. This technology not only advances our understanding of lung injuries and diseases but also reduces the need for animal testing and lowers the costs associated with clinical trials. Consequently, it accelerates the development of safer and more effective treatments.
             </p>
+
+            <!-- Financial Support Request -->
+            <p>
+                Any <strong>financial support</strong> would significantly aid me in staying on track and completing my studies. Your contributions will help alleviate the financial pressures and allow me to focus more on my research.
+            </p>
+
+            <!-- Donation Information -->
             <ul>
                 <li><strong>USDT (TRC20):</strong> TNkpdodCBqPqSuDTjgyoSYWLNQBedByFnu</li>
                 <li><strong>BTC (BEP20):</strong> 0xbd5088030c09150cefda3dc5572d561033023a5a</li>
@@ -99,20 +165,15 @@
                 <li><strong>SOL (Solana):</strong> D4SDRTgmsTT5bWc2M4h69zasNkf88PFE6ZBzTBZBt46i</li>
             </ul>
 
-            <!-- Image container -->
+            <!-- Additional Images -->
             <div class="image-container">
-                <img src="Image/Poor_PhD_Student.PNG" alt="Poor Ph.D. Student Image">
                 <img src="Image/lung-on-a-chip.PNG" alt="Lung-on-a-chip Image">
             </div>
 
+            <!-- Image Caption -->
             <div class="image-caption">
                 <p>
-                    My research aims to assist patients with lung injuries by promoting the regeneration of alveolar tissue 
-                    and providing innovative therapeutic strategies for lung adenocarcinoma. Through the development of a 
-                    lung-on-a-chip model, we are advancing biomedical research in several ways. This technology mimics the 
-                    physiological environment of the human lung, offering a more accurate platform for studying lung diseases. 
-                    Additionally, it significantly reduces the need for animal testing and lowers the costs associated with 
-                    clinical trials, accelerating the development of safer and more effective treatments.
+                    My research aims to assist patients with lung injuries by promoting the regeneration of alveolar tissue and providing innovative therapeutic strategies for lung adenocarcinoma. Through the development of a lung-on-a-chip model, we are advancing biomedical research in several ways. This technology mimics the physiological environment of the human lung, offering a more accurate platform for studying lung diseases. Additionally, it significantly reduces the need for animal testing and lowers the costs associated with clinical trials, accelerating the development of safer and more effective treatments.
                 </p>
             </div>
         </div>
