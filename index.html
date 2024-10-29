@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poor Ph.D. Student's Research</title>
     <style>
-        /* Background settings */
+        /* Reset default margins and paddings */
         html, body {
             margin: 0;
             padding: 0;
@@ -160,12 +160,12 @@
                 width: 100%;
                 margin-right: 0;
                 margin-bottom: 20px;
-                position: static; /* 取消 sticky 定位 */
-                order: 2; /* 保持在内容之后 */
+                position: static; /* Remove sticky positioning */
+                order: 2; /* Ensure sidebar is after content */
             }
 
             .content {
-                order: 1; /* 保持在前面 */
+                order: 1; /* Ensure content is before sidebar */
             }
 
             .section {
@@ -204,13 +204,13 @@
                 <h1>Poor Ph.D. Student's Research</h1>
             </div>
 
-            <!-- Introduction -->
+            <!-- About Me Section -->
             <h2 class="subtitle">About Me</h2>
             <p>
                 I am a bioengineering PhD student facing significant financial challenges. My stipend barely covers my basic living expenses, making it difficult to afford meals, maintain savings, and pay rent. The financial strain often forces me to work long hours and stay up late to keep up with my research. Despite these hardships, I am dedicated to completing my degree and contributing valuable insights to the field of biomedical science.
             </p>
 
-            <!-- Research Focus -->
+            <!-- Research Focus Section -->
             <h2 class="subtitle">Research Focus</h2>
             <p>
                 My research focuses on <strong>lung-on-a-chip</strong> technology, which integrates <strong>organ-on-a-chip</strong> systems with <strong>stem cells</strong> to study lung development and regeneration. This innovative approach aims to develop new therapeutic strategies for <strong>lung adenocarcinoma</strong>, a type of lung cancer. My research aims to assist patients with lung injuries by promoting the regeneration of alveolar tissue and providing innovative therapeutic strategies for lung adenocarcinoma. Through the development of a lung-on-a-chip model and the use of bioreactors for tissue culture, we are advancing biomedical research in several ways. This technology mimics the physiological environment of the human lung, offering a more accurate platform for studying lung diseases. Additionally, it significantly reduces the need for animal testing and lowers the costs associated with clinical trials, accelerating the development of safer and more effective treatments.
@@ -263,7 +263,7 @@
                 <li><strong>ETH (ERC20):</strong> 0xbd5088030c09150cefda3dc5572d561033023a5a</li>
                 <li><strong>SOL (Solana):</strong> D4SDRTgmsTT5bWc2M4h69zasNkf88PFE6ZBzTBZBt46i</li>
             </ul>
-            <!-- 添加捐赠页面链接 -->
+            <!-- Link to Independent Donations Page -->
             <a href="donations.html" class="back-link" style="display: block; margin-top: 20px; text-decoration: none; color: #4CAF50; font-weight: bold;">View Donations Page →</a>
         </div>
     </div>
